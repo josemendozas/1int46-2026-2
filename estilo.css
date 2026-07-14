@@ -168,12 +168,12 @@ main {
 
 .hero h1,
 .hero h2 {
-  max-width: 840px;
+  max-width: 780px;
   margin: 0;
   color: #121820;
-  font-size: clamp(2.35rem, 4.8vw, 4.25rem);
+  font-size: clamp(2rem, 3.4vw, 3rem);
   font-weight: 700;
-  line-height: 1;
+  line-height: 1.08;
   overflow-wrap: break-word;
 }
 
@@ -551,8 +551,8 @@ details p {
 .post-hero h1 {
   margin: 0 0 12px;
   color: #151a20;
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  line-height: 0.98;
+  font-size: clamp(1.95rem, 3.6vw, 2.8rem);
+  line-height: 1.06;
 }
 
 .post-content {
@@ -644,8 +644,8 @@ details p {
 
   .hero h1,
   .hero h2 {
-    font-size: clamp(2rem, 8.6vw, 2.35rem);
-    line-height: 1.04;
+    font-size: clamp(1.75rem, 7.2vw, 2.1rem);
+    line-height: 1.1;
   }
 
   .learning-grid {
