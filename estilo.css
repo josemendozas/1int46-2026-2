@@ -1,15 +1,15 @@
 :root {
-  --accent: #003876;
-  --accent-dark: #002653;
-  --accent-soft: #eaf1f8;
-  --secondary: #7b1e3b;
-  --text: #222222;
-  --muted: #5f6670;
-  --line: #d9dee5;
-  --paper: #ffffff;
-  --subtle: #f6f7f9;
-  --max-width: 1120px;
-  --content-width: 760px;
+  --paper: #faf7f1;
+  --subtle: #f2ede2;
+  --line: #e0d9c7;
+  --text: #1a1a1a;
+  --muted: #5a544d;
+  --accent: #8a3a1c;
+  --accent-dark: #6b2a11;
+  --accent-soft: #f2e5d5;
+  --secondary: #3d5040;
+  --max-width: 1080px;
+  --content-width: 720px;
   color-scheme: light;
 }
 
@@ -33,7 +33,7 @@ body {
 }
 
 body.post-page {
-  background: #fbfbfc;
+  background: #fdfbf6;
 }
 
 a {
@@ -44,7 +44,7 @@ a {
 
 a:hover,
 a:focus {
-  color: var(--secondary);
+  color: var(--accent-dark);
 }
 
 img {
@@ -56,7 +56,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 20;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(250, 247, 241, 0.96);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(10px);
 }
@@ -85,10 +85,10 @@ img {
 
 .site-title {
   margin: 0;
-  color: var(--accent);
+  color: var(--text);
   font-family: "Crimson Pro", Georgia, serif;
-  font-size: clamp(1.45rem, 2vw, 2rem);
-  line-height: 1.05;
+  font-size: clamp(1.35rem, 1.9vw, 1.75rem);
+  line-height: 1.1;
   letter-spacing: 0;
   overflow-wrap: break-word;
 }
@@ -101,16 +101,8 @@ img {
 .site-subtitle {
   margin: 6px 0 0;
   color: var(--muted);
-  font-size: 0.93rem;
-  line-height: 1.35;
-}
-
-.top-link {
-  flex: 0 0 auto;
-  color: var(--accent);
   font-size: 0.92rem;
-  font-weight: 700;
-  text-decoration: none;
+  line-height: 1.35;
 }
 
 .nav-menu {
@@ -140,19 +132,19 @@ main {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 320px);
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 300px);
   gap: 48px;
   align-items: end;
-  padding: 76px 0 48px;
+  padding: 72px 0 48px;
   border-bottom: 1px solid var(--line);
 }
 
 .eyebrow {
   margin: 0 0 14px;
   color: var(--secondary);
-  font-size: 0.84rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
   overflow-wrap: break-word;
 }
@@ -168,93 +160,59 @@ main {
 
 .hero h1,
 .hero h2 {
-  max-width: 780px;
+  max-width: 720px;
   margin: 0;
-  color: #121820;
-  font-size: clamp(2rem, 3.4vw, 3rem);
-  font-weight: 700;
-  line-height: 1.08;
+  color: var(--text);
+  font-size: clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight: 600;
+  line-height: 1.12;
   overflow-wrap: break-word;
 }
 
 .hero .lead {
-  max-width: 680px;
-  margin: 24px 0 0;
-  color: #3a414a;
-  font-size: clamp(1.08rem, 1.8vw, 1.35rem);
-  line-height: 1.45;
+  max-width: 640px;
+  margin: 20px 0 0;
+  color: #3a3733;
+  font-size: clamp(1.02rem, 1.6vw, 1.18rem);
+  line-height: 1.5;
 }
 
 .hero-meta {
   align-self: stretch;
   display: grid;
   align-content: end;
-  gap: 16px;
-  padding: 24px 0 4px;
-  border-top: 4px solid var(--accent);
+  gap: 10px;
+  padding: 20px 0 4px;
+  border-top: 3px solid var(--accent);
 }
 
 .hero-meta p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  min-height: 44px;
-  max-width: 100%;
-  padding: 10px 18px;
-  border: 2px solid var(--accent);
-  border-radius: 6px;
-  background: var(--accent);
-  color: #ffffff;
-  font-weight: 800;
-  line-height: 1.2;
-  text-decoration: none;
-}
-
-.button:hover,
-.button:focus {
-  background: var(--accent-dark);
-  border-color: var(--accent-dark);
-  color: #ffffff;
-}
-
-.button.secondary {
-  background: transparent;
-  color: var(--accent);
-}
-
-.button.secondary:hover,
-.button.secondary:focus {
-  background: var(--accent-soft);
-  color: var(--accent-dark);
+  font-size: 0.94rem;
 }
 
 .section {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  gap: 52px;
-  padding: 56px 0;
+  grid-template-columns: 200px minmax(0, 1fr);
+  gap: 48px;
+  padding: 52px 0;
   border-bottom: 1px solid var(--line);
   scroll-margin-top: 148px;
 }
 
 .section-title {
   margin: 0;
-  color: var(--accent);
-  font-size: clamp(1.7rem, 3vw, 2.45rem);
-  line-height: 1.05;
+  color: var(--text);
+  font-size: clamp(1.55rem, 2.4vw, 2.05rem);
+  line-height: 1.1;
+  font-weight: 600;
 }
 
 .section-kicker {
   margin: 10px 0 0;
   color: var(--muted);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   line-height: 1.4;
 }
 
@@ -275,94 +233,48 @@ main {
 }
 
 .callout {
-  margin: 28px 0;
-  padding: 20px 22px;
-  border-left: 5px solid var(--accent);
+  margin: 26px 0;
+  padding: 18px 22px;
+  border-left: 4px solid var(--accent);
   background: var(--accent-soft);
-  color: #172331;
-  font-weight: 650;
+  color: #2b1e14;
+  font-size: 0.98rem;
+  line-height: 1.55;
 }
 
-.info-grid,
-.learning-grid,
 .block-grid,
 .post-list {
   display: grid;
-  gap: 16px;
+  gap: 18px;
 }
 
-.info-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 24px;
-}
-
-.info-item,
-.learning-item,
 .course-block,
 .post-card {
   border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #ffffff;
-}
-
-.info-item {
-  padding: 16px;
-}
-
-.info-item strong,
-.learning-item strong {
-  display: block;
-  color: var(--accent);
-  font-size: 0.86rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.info-item span,
-.learning-item span {
-  display: block;
-  margin-top: 6px;
-}
-
-.learning-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.learning-item {
-  padding: 18px;
-}
-
-.learning-number {
-  color: var(--secondary);
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  line-height: 1;
-}
-
-.block-grid {
-  gap: 20px;
+  border-radius: 4px;
+  background: #fdfbf6;
 }
 
 .course-block {
-  padding: 24px;
+  padding: 24px 26px;
 }
 
 .block-meta {
   margin: 0 0 8px;
   color: var(--secondary);
-  font-size: 0.82rem;
-  font-weight: 800;
-  letter-spacing: 0.07em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
 .course-block h3 {
-  margin: 0 0 12px;
-  color: #151a20;
+  margin: 0 0 10px;
+  color: var(--text);
   font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.55rem;
-  line-height: 1.1;
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.15;
 }
 
 .course-block p {
@@ -372,8 +284,8 @@ main {
 .reading-list {
   margin: 14px 0 0;
   padding-left: 20px;
-  color: #2e343b;
-  font-size: 0.95rem;
+  color: #2e2a25;
+  font-size: 0.94rem;
 }
 
 .reading-list li + li {
@@ -383,26 +295,26 @@ main {
 .table-wrap {
   overflow-x: auto;
   border: 1px solid var(--line);
-  border-radius: 8px;
-  background: #ffffff;
+  border-radius: 4px;
+  background: #fdfbf6;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.94rem;
+  font-size: 0.93rem;
 }
 
 caption {
   padding: 14px 16px;
   color: var(--muted);
   text-align: left;
-  font-size: 0.92rem;
+  font-size: 0.9rem;
 }
 
 th,
 td {
-  padding: 13px 14px;
+  padding: 12px 14px;
   border-bottom: 1px solid var(--line);
   vertical-align: top;
   text-align: left;
@@ -410,10 +322,11 @@ td {
 
 thead th {
   background: var(--subtle);
-  color: #151a20;
-  font-size: 0.8rem;
-  letter-spacing: 0.04em;
+  color: var(--text);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 tbody tr:last-child td {
@@ -422,17 +335,17 @@ tbody tr:last-child td {
 
 .schedule-table th:first-child,
 .schedule-table td:first-child {
-  width: 76px;
+  width: 68px;
   text-align: center;
 }
 
 .formula {
   margin: 18px 0 0;
-  padding: 16px 18px;
+  padding: 14px 18px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 4px;
   background: var(--subtle);
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 .bibliography {
@@ -445,64 +358,40 @@ tbody tr:last-child td {
 }
 
 .bibliography a {
-  font-weight: 650;
+  font-weight: 600;
 }
 
 .subheading {
-  margin: 28px 0 12px;
-  color: #151a20;
-  font-size: 1.1rem;
+  margin: 26px 0 12px;
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 
 .teacher {
   display: grid;
-  grid-template-columns: 180px minmax(0, 1fr);
+  grid-template-columns: 200px minmax(0, 1fr);
   gap: 28px;
   align-items: start;
 }
 
 .teacher img {
-  width: 180px;
-  aspect-ratio: 1;
-  border-radius: 8px;
+  width: 200px;
+  aspect-ratio: 2 / 3;
+  border-radius: 4px;
   object-fit: cover;
   border: 1px solid var(--line);
-}
-
-.teacher h3 {
-  margin: 0 0 10px;
-  color: #151a20;
-  font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.75rem;
 }
 
 .contact-list {
   display: grid;
   gap: 8px;
-  margin: 16px 0 0;
+  margin: 0;
   padding: 0;
   list-style: none;
-}
-
-details {
-  border-top: 1px solid var(--line);
-}
-
-details:last-child {
-  border-bottom: 1px solid var(--line);
-}
-
-summary {
-  cursor: pointer;
-  padding: 16px 0;
-  color: #151a20;
-  font-weight: 800;
-}
-
-details p {
-  margin-top: 0;
-  padding-bottom: 16px;
-  color: #343b44;
+  font-size: 1.02rem;
 }
 
 .post-card {
@@ -513,20 +402,21 @@ details p {
 .post-meta {
   display: block;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .post-card h2,
 .post-card h3 {
   margin: 6px 0 8px;
   font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.45rem;
-  line-height: 1.1;
+  font-size: 1.32rem;
+  font-weight: 600;
+  line-height: 1.15;
 }
 
 .post-card h2 a,
 .post-card h3 a {
-  color: #151a20;
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -538,32 +428,34 @@ details p {
 }
 
 .post-shell {
-  max-width: 780px;
+  max-width: 720px;
   margin: 0 auto;
-  padding: 56px 24px 72px;
+  padding: 48px 24px 72px;
 }
 
 .post-hero {
-  padding: 28px 0 32px;
+  padding: 20px 0 28px;
   border-bottom: 1px solid var(--line);
 }
 
 .post-hero h1 {
   margin: 0 0 12px;
-  color: #151a20;
-  font-size: clamp(1.95rem, 3.6vw, 2.8rem);
-  line-height: 1.06;
+  color: var(--text);
+  font-size: clamp(1.75rem, 3.2vw, 2.4rem);
+  font-weight: 600;
+  line-height: 1.1;
 }
 
 .post-content {
-  padding-top: 34px;
+  padding-top: 30px;
 }
 
 .post-content h2 {
-  margin-top: 34px;
-  color: var(--accent);
+  margin-top: 30px;
+  color: var(--text);
   font-family: "Crimson Pro", Georgia, serif;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
+  font-weight: 600;
 }
 
 .footer {
@@ -571,7 +463,7 @@ details p {
   margin: 0 auto;
   padding: 28px 24px 48px;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
 .footer p {
@@ -581,27 +473,23 @@ details p {
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    gap: 28px;
-    padding-top: 52px;
+    gap: 24px;
+    padding-top: 48px;
   }
 
   .hero-meta {
-    max-width: 560px;
+    max-width: 520px;
   }
 
   .section {
     grid-template-columns: 1fr;
-    gap: 22px;
+    gap: 18px;
     scroll-margin-top: 180px;
   }
 
   .section-body,
   .section-body.wide {
     max-width: none;
-  }
-
-  .info-grid {
-    grid-template-columns: 1fr;
   }
 }
 
@@ -622,12 +510,7 @@ details p {
   }
 
   .site-title {
-    font-size: 1.28rem;
-  }
-
-  .top-link {
-    display: inline-block;
-    margin-top: 8px;
+    font-size: 1.2rem;
   }
 
   .nav-menu {
@@ -638,18 +521,14 @@ details p {
   }
 
   .eyebrow {
-    font-size: 0.76rem;
-    letter-spacing: 0.05em;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
   }
 
   .hero h1,
   .hero h2 {
-    font-size: clamp(1.75rem, 7.2vw, 2.1rem);
-    line-height: 1.1;
-  }
-
-  .learning-grid {
-    grid-template-columns: 1fr;
+    font-size: clamp(1.6rem, 6.6vw, 2rem);
+    line-height: 1.15;
   }
 
   .teacher {
@@ -657,7 +536,8 @@ details p {
   }
 
   .teacher img {
-    width: 150px;
+    width: 160px;
+    aspect-ratio: 2 / 3;
   }
 
   .schedule-table,
@@ -691,9 +571,9 @@ details p {
   .schedule-table td,
   .schedule-table td:first-child {
     display: grid;
-    grid-template-columns: 110px minmax(0, 1fr);
+    grid-template-columns: 100px minmax(0, 1fr);
     gap: 12px;
-    padding: 7px 0;
+    padding: 6px 0;
     border-bottom: 0;
     text-align: left;
   }
@@ -701,8 +581,8 @@ details p {
   .schedule-table td::before {
     content: attr(data-label);
     color: var(--muted);
-    font-size: 0.78rem;
-    font-weight: 800;
+    font-size: 0.76rem;
+    font-weight: 700;
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
@@ -717,10 +597,6 @@ details p {
   .post-card,
   .callout {
     padding: 18px;
-  }
-
-  .button {
-    width: 100%;
   }
 
   .post-shell {
