@@ -687,6 +687,21 @@ main {
   border-bottom-color: var(--fg);
 }
 
+/* Lista de materiales adicionales que existen pero no están online */
+.paper-locked {
+  margin-top: 6px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.75rem;
+  color: var(--muted);
+  opacity: 0.6;
+  letter-spacing: 0.02em;
+}
+
+.paper-locked::before {
+  content: "○ ";
+  color: var(--muted);
+}
+
 /* ============ REFERENCIA (colapsables al final) ============ */
 
 .reference {
