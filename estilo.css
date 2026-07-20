@@ -665,6 +665,28 @@ main {
   max-width: 680px;
 }
 
+/* ============ Link discreto al slide-paper por semana ============ */
+
+.paper-slide {
+  margin-top: 12px;
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.82rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+}
+
+.paper-slide a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.paper-slide a:hover {
+  color: var(--fg);
+  border-bottom-color: var(--fg);
+}
+
 /* ============ REFERENCIA (colapsables al final) ============ */
 
 .reference {
